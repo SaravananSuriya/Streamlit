@@ -54,17 +54,17 @@ latitude = ['11.618170591192758','13.09194432071248' ]
 longitude = ['79.06308680906575','80.27159737387089']
 num = [324424,6575677]
 state = ['tamil nadu','chennai']
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='natural earth')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='conic equal area')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='conic conformal')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='equirectangular')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='mercator')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='orthographic')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='kavrayskiy7')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='mollweide')
-# sgeo = px.scatter_geo(lat=la,lon=lo,size=num,projection='winkel tripel')
-sca_geo = px.scatter_geo(lat=latitude,lon=longitude,size=num,projection='aitoff',opacity=0.5,hover_name=state,color=state,scope='asia') # opacity mentions a scatter brightnes
-st.plotly_chart(sca_geo)
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='natural earth')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='conic equal area')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='conic conformal')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='equirectangular')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='mercator')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='orthographic')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='kavrayskiy7')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='mollweide')
+# scatter_geo = px.scatter_geo(lat=la,lon=lo,size=num,projection='winkel tripel')
+scatter_geo = px.scatter_geo(lat=latitude,lon=longitude,size=num,projection='aitoff',opacity=0.5,hover_name=state,color=state,scope='asia') # opacity mentions a scatter brightnes
+st.plotly_chart(scatter_geo)
 
 # scatter mapbox
 fig = px.scatter_mapbox(lat=latitude,lon=longitude,zoom=10,color=state,width=1100,height=600,color_continuous_scale='jet',size = state,size_max=50,hover_name=state,title ='Scatter MapBox')
