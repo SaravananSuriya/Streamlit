@@ -1,106 +1,110 @@
 import streamlit as st
+from PIL import Image
+import time
 
-#title
+# title
 st.title('welcome to my project')
 
-#header
+# header
 st.header('Youtube data harvesting and warehousing')
 
-#sub header
+# sub header
 st.subheader('channel links')
 
-# information
+# information message
 st.info('enter a channel link')
 
-#warning message
+# warning message
 st.warning('plaese paste the link here')
 
-#error
+# error message
 st.error('wrong link')
 
-#success message
+# success message
 st.success('successfully updated')
 
-#write
+# write
 st.write('maths fucntions')
 st.write(range(20))
 
-#markdown
+# markdown
 st.markdown('# project')
 st.markdown('# :star:')
+st.markdown('# :rainbow[this is streamlit]') # we can also change the color (red,blue,rainbow,violet,green,grey,orange)
 
-#text
+# text
 st.text('my first project')
 
-#caption
+# caption
 st.caption('caption is here')
 
-#to display a mathematic function
+# to display a mathematic function
 st.latex(r"(a+b)^2")
 
-#image
-#st.image('Screenshot (24).png') it is giving error
+# image
+img = Image.open('nature.png') # give path of your image
+st.image(img) 
 
-#widget
-#check box
+# widgets
+# check box
 st.checkbox('login')
 
-#button
+# button
 st.button('click')
 
-#radio button
+# radio button
 st.radio('pick your gender',['male','female','others'])
 
-#select box
+# select box
 st.selectbox('pick your choice',['python','java','html','data science'])
 
-#multi select
+# multi select
 st.multiselect('choose a department',['sales','accounts','finance','hr'])
 
-#select slider
+# select slider
 st.select_slider('ratings',['bad','good','excellent','outstanding'])
 
-#slider
+# slider
 st.slider('enter a number',0,20)
 
-#number input
+# number input
 st.number_input('pick a number',0,20)
 
-#text input
+# text input
 st.text_input('enter a channel id')
 
-#date input
+# date input
 st.date_input('college passed out')
 
-#time input
+# time input
 st.time_input('enter a working time')
 
-#text area
+# text area
 st.text_area('welcome tell about yourself')
 
-#file upload
+# file upload
 st.file_uploader('upload your file')
 
-#color
+# color
 st.color_picker('select color')
 
-#progress
+# progress
 st.progress(50)
 
-#spinner
-with st.spinner('plaese wait'):
-    t.sleep(1)
+# spinner
+with st.spinner('please wait'):
+    time.sleep(3)
 
-#ballons
+# ballons
 st.balloons()
 
-#sidebar
+# sidebar
 st.sidebar.text_input('enter name')
 st.sidebar.text_input('enter age')
 st.sidebar.radio('select profession',['student','working','studying'])
 st.sidebar.button('submit')
 
-#data visualization
+# data visualization
 st.title('bar chart')
 data = pd.DataFrame(np.random.randn(50,2),columns=['x','y'])
 st.bar_chart(data)
@@ -108,7 +112,7 @@ st.line_chart(data)
 st.area_chart(data)
 
 
-#sidebar
+# sidebar
 with st.sidebar:
   selected = option_menu(
     menu_title = "Main Menu",
